@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-my-green: #02ab15;
+  --font-poppins: "Poppins", sans-serif;
+  --font-bebas-neue: "Bebas Neue", sans-serif;
+  --font-BBH-Sans-Bogle: "BBH Sans Bogle", sans-serif;
+  --font-alfa-slab-one: "Alfa Slab One", sans-serif;
+  --animate-slide-left: slideleft 500ms linear;
+  --animate-slide-right: slideright 500ms linear;
+  --color-my-white: #dad8d8;
+  --color-card: #18211b;
+  --animate-slide-top: slidetop 500ms linear;
+  --animate-popup: popup 500ms linear;
+  --animate-ring: ring 3s linear infinite;
+  --animate-bg-linear-animation: bg-linear-animation 10s linear infinite;
+  --animate-move-up: move-up 10s linear infinite;
+}
+
+@keyframes slideleft {
+  0% {
+    transform: translateX(-5%);
+  }
+  ,
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes slideright {
+  0% {
+    transform: translateX(5%);
+  }
+  ,
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes slidetop {
+  0% {
+    transform: translateY(5%);
+  }
+  ,
+  100% {
+    transforml: none;
+  }
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  ,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #e65c00;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #18b201;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #0456c8;
+  }
+}
+
+@keyframes bg-linear-animation {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@keyframes move-up {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(30vh);
+    opacity: 0;
+  }
+}
+
+body {
+  @apply bg-[#1e1f1e];
+  /* background-image: url("bg2.jpg"); */
+}
+
+/* sembunyikan scrollbar untuk Chrome, Safari, dan Edge */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* sembunyikan scrollbar untuk Firefox */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge lama */
+}
+
+.dot {
+  @apply absolute rounded-full;
+  animation: move-up 5s linear infinite;
+  box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.4);
+}
